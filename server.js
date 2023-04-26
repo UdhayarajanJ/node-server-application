@@ -10,8 +10,12 @@ const port = process.env.PORT || 5000;
 //     res.send("Get All Contacts");
 // });
 
+// app.get('/api/contact', (req, res) => {
+//     res.json({ message: "Get All Contacts" });
+// });
+
 app.get('/api/contact', (req, res) => {
-    res.json({ message: "Get All Contacts" });
+    res.status(201).json({ message: "Get All Contacts" });
 });
 
 app.listen(port, () => {
