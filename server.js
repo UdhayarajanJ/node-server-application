@@ -14,9 +14,11 @@ const port = process.env.PORT || 5000;
 //     res.json({ message: "Get All Contacts" });
 // });
 
-app.get('/api/contact', (req, res) => {
-    res.status(201).json({ message: "Get All Contacts" });
-});
+// app.get('/api/contact', (req, res) => {
+//     res.status(201).json({ message: "Get All Contacts" });
+// });
+
+app.use('/api/contact', require('./routes/contactRoutes'));
 
 app.listen(port, () => {
     console.log(`Server Running On Port ${port}`);
