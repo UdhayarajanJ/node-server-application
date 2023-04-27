@@ -1,7 +1,11 @@
 // Import Package
 const express = require('express');
 const env = require('dotenv').config();
+const errorHandler = require('./middlewares/errorHandler');
+const connectDb = require('./config/dbConnection');
 
+//Connect Database
+connectDb();
 //Initialize the server configuration
 const app = new express();
 const port = process.env.PORT || 5000;
@@ -18,7 +22,12 @@ const port = process.env.PORT || 5000;
 //     res.status(201).json({ message: "Get All Contacts" });
 // });
 
+//In-build middleware body parser on express
+app.use(express.json());
+
 app.use('/api/contact', require('./routes/contactRoutes'));
+
+app.use(errorHandler);
 
 app.listen(port, () => {
     console.log(`Server Running On Port ${port}`);
