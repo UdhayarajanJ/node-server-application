@@ -1,0 +1,283 @@
+{
+	"info": {
+		"_postman_id": "f3350beb-9715-4821-95be-ff826a79dbe6",
+		"name": "Node-Application-Routes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19221473"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register The User Data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"UdhayarajanJ\",\r\n    \"email\":\"udhayarajan080@gmail.com\",\r\n    \"password\":\"TestEnvironment\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User Details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"udhayarajan080@gmail.com\",\r\n    \"password\":\"TestEnvironment\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current User Details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6eyJ1c2VyTmFtZSI6IlVkaGF5YXJhamFuSiIsImVtYWlsIjoidWRoYXlhcmFqYW4wODBAZ21haWwuY29tIiwiaWQiOiI2NDRiNTdlNmY3NzY2NzBjNmZiYTgyNDIifSwiaWF0IjoxNjgyNjU5MzkxLCJleHAiOjE2ODI2NjA1OTF9.00mFi4m363-K9rxtD7W66yPQzHW_VDGmF5iQuk9j-Fw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/user/current",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"user",
+								"current"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contact",
+			"item": [
+				{
+					"name": "Get All Contacts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6eyJ1c2VyTmFtZSI6IlVkaGF5YXJhamFuSiIsImVtYWlsIjoidWRoYXlhcmFqYW4wODBAZ21haWwuY29tIiwiaWQiOiI2NDRiNTdlNmY3NzY2NzBjNmZiYTgyNDIifSwiaWF0IjoxNjgyNjU5NTE5LCJleHAiOjE2ODI2NjA3MTl9.KFD6iypAkL84k5R7bzipjXB-nYYOTWlyD2DRdRRp1Qs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/contact",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Contacts By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6eyJ1c2VyTmFtZSI6IlVkaGF5YXJhamFuSiIsImVtYWlsIjoidWRoYXlhcmFqYW4wODBAZ21haWwuY29tIiwiaWQiOiI2NDRiNTdlNmY3NzY2NzBjNmZiYTgyNDIifSwiaWF0IjoxNjgyNjU5NTE5LCJleHAiOjE2ODI2NjA3MTl9.KFD6iypAkL84k5R7bzipjXB-nYYOTWlyD2DRdRRp1Qs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/contact/644b5950f776670c6fba824c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"contact",
+								"644b5950f776670c6fba824c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Contacts By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6eyJ1c2VyTmFtZSI6IlVkaGF5YXJhamFuSiIsImVtYWlsIjoidWRoYXlhcmFqYW4wODBAZ21haWwuY29tIiwiaWQiOiI2NDRiNTdlNmY3NzY2NzBjNmZiYTgyNDIifSwiaWF0IjoxNjgyNjU5NTE5LCJleHAiOjE2ODI2NjA3MTl9.KFD6iypAkL84k5R7bzipjXB-nYYOTWlyD2DRdRRp1Qs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/contact/644b5950f776670c6fba824c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"contact",
+								"644b5950f776670c6fba824c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Contact Info",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6eyJ1c2VyTmFtZSI6IlVkaGF5YXJhamFuSiIsImVtYWlsIjoidWRoYXlhcmFqYW4wODBAZ21haWwuY29tIiwiaWQiOiI2NDRiNTdlNmY3NzY2NzBjNmZiYTgyNDIifSwiaWF0IjoxNjgyNjU5NTE5LCJleHAiOjE2ODI2NjA3MTl9.KFD6iypAkL84k5R7bzipjXB-nYYOTWlyD2DRdRRp1Qs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"UdhayarajanUdhaya\",\r\n    \"email\": \"testgmail.com\",\r\n    \"phone\": \"786786786877\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/contact/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"contact",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Contact Info",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6eyJ1c2VyTmFtZSI6IlVkaGF5YXJhamFuSiIsImVtYWlsIjoidWRoYXlhcmFqYW4wODBAZ21haWwuY29tIiwiaWQiOiI2NDRiNTdlNmY3NzY2NzBjNmZiYTgyNDIifSwiaWF0IjoxNjgyNjU5NTE5LCJleHAiOjE2ODI2NjA3MTl9.KFD6iypAkL84k5R7bzipjXB-nYYOTWlyD2DRdRRp1Qs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"UdhayarajanAbinaya\",\r\n    \"email\": \"testgmail.com\",\r\n    \"phone\": \"786786786877\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/contact/644b5950f776670c6fba824c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"contact",
+								"644b5950f776670c6fba824c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

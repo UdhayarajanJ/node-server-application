@@ -3,6 +3,7 @@ const express = require('express');
 const env = require('dotenv').config();
 const errorHandler = require('./middlewares/errorHandler');
 const connectDb = require('./config/dbConnection');
+const cors = require('cors');
 
 //Connect Database
 connectDb();
@@ -22,10 +23,14 @@ const port = process.env.PORT || 5000;
 //     res.status(201).json({ message: "Get All Contacts" });
 // });
 
+//Cross Orgin Setup
+app.use(cors());
+
 //In-build middleware body parser on express
 app.use(express.json());
 
 app.use('/api/contact', require('./routes/contactRoutes'));
+app.use('/api/user', require('./routes/userRoutes'));
 
 app.use(errorHandler);
 
